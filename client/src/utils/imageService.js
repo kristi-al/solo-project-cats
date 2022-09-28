@@ -5,8 +5,9 @@ export const postImage = (formData) => {
     console.log(formData);
     return fetch(baseUrl + 'image', { 
          method: 'PUT',
-         body: formData
-     }).then((result) => result.json)
+         body: formData,
+     }).then((result) => result.json())
+     //.then(data => console.log(data))
      .catch(error => console.log(error))
 }
 

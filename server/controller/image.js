@@ -1,6 +1,6 @@
 const glob = require("glob");
 const multer = require('multer');
-const Resize = require('./resize');
+const Resize = require('./../middlewares/resize');
 
 exports.upload = multer({
   limits: {
@@ -14,7 +14,9 @@ exports.addImage = async (req, res) => {
       const imagePath = ('./public/images');
       const fileUpload = new Resize(imagePath);
       const filename = await fileUpload.save(req.file.buffer);
+      console.log('file   ',filename);
       res.status(201); 
+      res.send({filename});
       } catch (e) {
          res.sendStatus(500);
        }

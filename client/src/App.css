@@ -1,22 +1,251 @@
 body {
   background-color: white;
 }
-.navbar-container {
-  background-color: gray;
+
+.App-header {
   position: absolute;
-  width: 100%;
-  left: 0;
   top: 0;
+  width: 100%;
+  background-color: aqua;
 }
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#logo{
+  margin-top: 0px;
+  position: absolute;
+  top: 10px;
+  left: 50px;
+  width: 100%;
+  font-size: 60px;
+  
+  color: #080473;
+
+}
+#username {
+ position: absolute;
+ right: 250px;
+}
+.left{
+  position: absolute;
+
+  top: 20px;
+}
+#create-button {
+  right: 120px;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #ffad05;
+}
+.right {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+.menu-button {
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: white;
+}
+
 .image-list-container {
   margin-top: 100px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+.post-image-form {
+  z-index: 11;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#post {
+  background-color: white;
+  position: relative;
+  height: 500px;
+  width: 500px;
+  background-color: white;
+  z-index: 12;
+  border-radius: 15px;
+}
+
+input[type="file"] {
+  display: none;
+}
+.custom-file-upload {
+  position: absolute;
+  top: 10px;
+  left: 50px;
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+img {
+  width: 400px;
+  height: 400px;
+  object-fit:cover;
+}
+
+
+#crop-image {
+  position: absolute;
+  left: 50px;
+  top: 50px;
+}
+#pic {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+
+}
+#post-button {
+  position: absolute;
+  bottom: 10px;
+  left: 140px;
+  background-color: #ffad05;
+  height: 30px;
+  width: 50%;
+  border-radius: 20px;
 }
 .image-container {
   margin-top: 22px;
+  margin-left: 10px;
+  margin-right: 10px;
   width: 400px;
   height: 400px;
-  border: 1px solid black;
+}
+img {
+  border-radius: 10px;
+}
+.fullscreen {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.black {
+  z-index: 10;
+  opacity: .5;
+  background-color: black;
+}
+.register-form-container {
+  z-index: 11;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#register {
+  position: relative;
+  height: 450px;
+  width: 400px;
+  background-color: white;
+  z-index: 12;
+  border-radius: 15px;
+}
+.register-form {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding-left: 35px;
+}
+#register-form-button {
+  background-color: #ffad05;
+  height: 30px;
+  width: 100%;
+  border-radius: 20px;
+}
+.login-form-container {
+  z-index: 11;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#register h2 {
+  margin-top: 70px;
+  padding-left: 35px;
+}
+#register input {
+  margin-bottom: 30px;
+  width: 310px;
+}
 
+button {
+  border: none;
+}
+#login-button {
+  background-color: #ffad05;
+  box-shadow: none;
+
+}
+#login {
+  position: relative;
+  height: 400px;
+  width: 400px;
+  background-color: white;
+  z-index: 12;
+  border-radius: 15px;
+  
+
+}
+#login h2 {
+  margin-top: 70px;
+  padding-left: 35px;
+}
+#login input {
+  margin-bottom: 30px;
+}
+#form-login-button {
+  background-color: #ffad05;
+  height: 30px;
+  width: 100%;
+  border-radius: 20px;
+}
+.login-form {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding-left: 35px;
+}
+
+
+
+.close {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+  background-color: white;
+  border-radius: 50%;
+  
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before, .close:after {
+  position: absolute;
+  left: 5px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
 }

@@ -12,7 +12,7 @@ class Resize {
 
     await sharp(buffer)
       .resize(400, 400, {
-        fit: sharp.fit.inside,
+        fit: sharp.fit.outside,
         withoutEnlargement: true
       })
       .toFile(filepath);
